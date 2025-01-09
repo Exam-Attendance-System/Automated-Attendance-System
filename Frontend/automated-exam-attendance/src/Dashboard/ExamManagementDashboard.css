@@ -1,0 +1,121 @@
+/* Ensure the main container is a flex container */
+.dashboard-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f7fc;
+  display: flex; /* Display children in a row */
+  flex-direction: row; /* Default direction is row */
+  height: 100vh; /* Make it full height */
+}
+
+/* Sidebar styling */
+/* .side-bar {
+  width: 250px; 
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  position: fixed; 
+  height: 100vh; 
+} */
+
+/* Content area styling */
+.dashboard-content {
+  margin-left: 270px; /* Give space for sidebar */
+  flex-grow: 1; /* Content takes up remaining space */
+  padding: 20px;
+  background-color: #f4f7fc;
+  overflow-y: auto; /* Allow scrolling for content if needed */
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Button styling */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Add exam button styling */
+.add-exam-btn {
+  margin-bottom: 20px;
+  margin-left: auto;
+  display: block;
+}
+
+/* Exam List and Attendance Status styling */
+.exam-list, .attendance-status {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f1f1;
+}
+
+/* Modal overlay styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal styling */
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.modal button:hover {
+  background-color: #45a049;
+}
