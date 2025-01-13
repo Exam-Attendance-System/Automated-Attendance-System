@@ -6,6 +6,7 @@
   display: flex; /* Display children in a row */
   flex-direction: row; /* Default direction is row */
   height: 100vh; /* Make it full height */
+  overflow: hidden;
 }
 
 /* Sidebar styling */
@@ -29,21 +30,27 @@
 
 /* Header */
 h1 {
-  text-align: center;
+  text-align: left;
   color: #333;
 }
 
+.title-button{
+  display: flex;
+  flex-direction: row;
+}
 /* Button styling */
-button {
-  background-color: #4CAF50;
+.add-exam-btn {
+  background-color: #E0CB90;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 16px;
+  height: 44px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
+.add-exam-btn:hover{
+  background-color: #E0CB90;
 }
 
 /* Add exam button styling */
@@ -118,4 +125,47 @@ th {
 
 .modal button:hover {
   background-color: #45a049;
+}
+
+.Exam-Activity {
+  display: flex;
+  flex-direction: row; 
+  gap: 20px; 
+  width: 100%;
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+}
+
+.Exam-Activity .exam-list,
+.Exam-Activity .attendance-status {
+  flex: 1; 
+  min-width: 300px; 
+  box-sizing: border-box; 
+}
+
+.Exam-Activity .exam-list {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Exam-Activity .attendance-status {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Exam-Activity .exam-list table {
+  width: 100%;
+}
+
+.Exam-Activity .attendance-status h2 {
+  font-size: 1.5rem;
+}
+
+.Exam-Activity .attendance-status p {
+  margin-top: 10px;
+  color: #555;
 }

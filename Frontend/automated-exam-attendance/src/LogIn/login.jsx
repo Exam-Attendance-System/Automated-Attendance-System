@@ -9,8 +9,8 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/dashboard");
-  }
+    navigate("/dashboard", { state: {Email} });
+  };
 
   return (
     <div className="login-container">

@@ -1,29 +1,42 @@
 /* Sidebar.css */
+
+h6{
+  line-height: 0rem;
+}
 .sidebar {
     height: 100vh;
     width: 250px;
-    background-color: #2c3e50;
-    color: white;
+    background-color: #fff;
+    color: black;
     position: fixed;
     top: 0;
     left: 0;
     padding-top: 30px;
     padding-left: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
+
+ .sidebar:hover {
+  transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+ 
   
   .sidebar-title {
     font-size: 24px;
-    margin-bottom: 40px;
-    color: #ecf0f1;
+    color: #000;
   }
   
   .sidebar-menu {
     list-style-type: none;
     padding: 0;
+    
   }
   
   .sidebar-menu li {
     margin-bottom: 20px;
+    
   }
   
   .sidebar-menu a {
@@ -32,12 +45,22 @@
     font-size: 18px;
     display: block;
     padding: 10px;
+    color: #000;
   }
   
   .sidebar-menu a:hover {
-    background-color: #34495e;
+    background-color: #d6ceb695;
     border-radius: 4px;
   }
+
+  .log-out-btn{
+    background-color: #E0CB90;
+    color: #fff;
+    width: 200px;
+    border-width: 0;
+    border-radius: 4px;
+  }
+  
   
   .main-content {
     margin-left: 250px;

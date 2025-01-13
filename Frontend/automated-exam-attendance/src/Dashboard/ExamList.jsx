@@ -1,5 +1,5 @@
-
 import { format } from "date-fns";
+import PropTypes from "prop-types";
 
 function ExamList({ exams }) {
   return (
@@ -10,7 +10,8 @@ function ExamList({ exams }) {
           <tr>
             <th>Exam Name</th>
             <th>Exam Date</th>
-            <th>Attendees</th>
+            <th>Time</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -18,7 +19,8 @@ function ExamList({ exams }) {
             <tr key={exam.id}>
               <td>{exam.name}</td>
               <td>{format(new Date(exam.date), "MMM d, yyyy")}</td>
-              <td>{exam.attendees}</td>
+              <td>{exam.time}</td> {/* Display exam time */}
+             
             </tr>
           ))}
         </tbody>
@@ -27,18 +29,16 @@ function ExamList({ exams }) {
   );
 }
 
-export default ExamList;
-
-
-import PropTypes from 'prop-types';
-
 ExamList.propTypes = {
   exams: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
-      attendees: PropTypes.number.isRequired,
+      time: PropTypes.string.isRequired, // New field for exam time
+      
     })
   ).isRequired,
 };
+
+export default ExamList;

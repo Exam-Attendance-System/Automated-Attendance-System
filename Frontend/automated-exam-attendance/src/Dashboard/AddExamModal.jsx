@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'; // Import PropTypes
 function AddExamModal({ addExam, closeModal }) {
   const [examName, setExamName] = useState('');
   const [examDate, setExamDate] = useState('');
-  const [attendees, setAttendees] = useState(0);
+  const [examTime, setExamTime] = useState(''); // Replacing attendees with examTime
 
   const handleSubmit = () => {
-    addExam({ name: examName, date: examDate, attendees: parseInt(attendees) });
+    addExam({ name: examName, date: examDate, time: examTime }); // Submit with examTime
     closeModal();
   };
 
@@ -27,10 +27,9 @@ function AddExamModal({ addExam, closeModal }) {
           onChange={(e) => setExamDate(e.target.value)} 
         />
         <input 
-          type="number" 
-          placeholder="Number of Attendees" 
-          value={attendees} 
-          onChange={(e) => setAttendees(e.target.value)} 
+          type="time"  // Use type="time" for selecting the time
+          value={examTime} 
+          onChange={(e) => setExamTime(e.target.value)} 
         />
         <div>
           <button onClick={handleSubmit}>Add Exam</button>
