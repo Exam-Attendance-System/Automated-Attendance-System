@@ -5,8 +5,8 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div>
-      <h2 className="sidebar-title">Attendance Manager</h2>
-      <h6>Attendance Automation System</h6>
+        <h2 className="sidebar-title">Attendance Manager</h2>
+        <h6>Attendance Automation System</h6>
       </div>
       <ul className="sidebar-menu">
         <li><a href="/dashboard">Dashboard</a></li>
