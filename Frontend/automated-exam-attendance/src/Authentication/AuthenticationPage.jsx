@@ -7,12 +7,11 @@ import RFIDAuthentication from "./RFIDAuthentication";
 function AuthenticationPage() {
   return (
     <>
-=
-        <Sidebar />
-        <Header />
-        <Title />
-        <RFIDAuthentication />
-   
+      <Sidebar />
+      <Header />
+      <Title />
+      <RFIDAuthentication />
+
     </>
   )
 }
