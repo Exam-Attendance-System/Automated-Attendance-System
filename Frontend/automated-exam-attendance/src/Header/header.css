@@ -7,9 +7,12 @@
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%; 
-    max-width: 850px; 
+    max-width: 920px; 
     margin: 0 auto; 
+    overflow: hidden;
+    margin-left: 280px;
     margin-bottom: 8px;
+    position: fixed;
   }
   
   .header-left img {

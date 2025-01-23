@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Header from '../Header/header';
 import ExamList from './ExamList';
 import ActivityStatus from './ActivityStatus';
 import AddExamModal from './AddExamModal';
@@ -6,7 +7,6 @@ import Sidebar from '../Sidebar/sidebar';
 import QuickStatCard from '../Dashboard/QuickStatCard';
 import IntegrationStatus from "../Dashboard/IntergrationStatus"
 import AttendanceAutomation from "../Dashboard/AttendanceAutomation"
-import Header from '../Header/header';
 import './ExamManagementDashboard.css';
 
 function App() {
@@ -21,13 +21,14 @@ function App() {
   };
 
   return (
+<>
+    <Header />
     <div className="dashboard-container">
       <div className='side-bar'>
       <Sidebar/>
       </div>
      
       <div className="dashboard-content">
-      <Header/>
       <div className='title-button'>
       <h1>Dashboard</h1>
       <button className="add-exam-btn" onClick={() => setShowModal(true)}>Add Exam</button>
@@ -43,8 +44,8 @@ function App() {
         <IntegrationStatus/>
         <AttendanceAutomation/>
       </div>
-     
     </div>
+    </>
   );
 }
 

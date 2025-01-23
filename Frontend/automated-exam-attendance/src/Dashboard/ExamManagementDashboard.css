@@ -26,6 +26,7 @@
   padding: 20px;
   background-color: #f4f7fc;
   overflow-y: auto; /* Allow scrolling for content if needed */
+  margin-top: 50px;
 }
 
 /* Header */
@@ -47,6 +48,7 @@ h1 {
   height: 44px;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 16px;
 }
 
 .add-exam-btn:hover{

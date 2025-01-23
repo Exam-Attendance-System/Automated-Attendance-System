@@ -8,7 +8,7 @@ function Header() {
   const [department, setDepartment] = useState("Physics");
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
-
+  
   const departments = [
     "Physics",
     "Chemistry",
