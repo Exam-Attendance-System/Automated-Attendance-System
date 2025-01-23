@@ -8,7 +8,8 @@ attendance_bp = Blueprint('attendance', __name__)
 @attendance_bp.route('/attendance', methods=['POST'])
 def sign_attendance():
     data = request.json
-    student_id = data.get('student_id')
+    qr_code_data = data.get('qr_code_data')
+    student_id = qr_code_data.split(';')
     exam_id = data.get('exam_id')
     
     if not student_id or not exam_id:

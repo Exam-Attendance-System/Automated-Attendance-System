@@ -47,16 +47,42 @@ for course, subjects in courses.items():
         exam_date = datetime.now() - timedelta(days=random.randint(1, 365))
         exam = {
             "_id": ObjectId(),
-            "exam_id": f"{random.choice(course_code)}{random.randint(10000, 99999)}",
+            "exam_id": f"{random.choice(course_code)}{random.randint(100, 400)}",
             "course": course,
             "subject": subject,
-            "date": exam_date
+            "date": exam_date,
+            "duration": random.randint(1, 3) * 60
         }
         exams.append(exam)
 
 # Insert exams into the exams collection
 db.exams.insert_many(exams)
+# Generate activity logs for each student and exam
+activities = []
+actions = ["Check-in", "Late", "Exam Scheduled", "Notification Sent"]
 
+for student in students:
+    for exam in exams:
+        if student["course_studied"] == exam["course"]:
+            activity = {
+                "_id": ObjectId(),
+                "activity_id": str(ObjectId()),
+                "student_id": student["_id"],
+                "exam_id": exam["_id"],
+                "attendance_id": None,  # Assuming attendance data is not available yet
+                "action": random.choice(actions),
+                "description": f"{random.choice(actions)} for {exam['subject']} exam",
+                "timestamp": datetime.now() - timedelta(days=random.randint(1, 365)),
+                "metadata": {
+                    "ip_address": f"192.168.{random.randint(0, 255)}.{random.randint(0, 255)}",
+                    "location": f"Building {random.randint(1, 10)}, Room {random.randint(1, 100)}"
+                },
+                "created_at": datetime.now()
+            }
+            activities.append(activity)
+
+# Insert activities into the activities collection
+db.activities.insert_many(activities)
 # Assign groups of students to each exam based on their course
 exam_assignments = []
 for exam in exams:

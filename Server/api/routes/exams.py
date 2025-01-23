@@ -13,10 +13,10 @@ def get_exams():
     for exam in exams:
         exam_list.append({
             'id': str(exam['_id']),
-            'student_id': str(exam['student_id']),
+            'exam_id': str(exam['exam_id']),
             'subject': exam['subject'],
             'date': exam['date'],
-            'score': exam['score']
+            'duration': exam['duration']
         })
     return jsonify(exam_list)
 
@@ -27,9 +27,10 @@ def get_exam(exam_id):
     if exam:
         return jsonify({
             'id': str(exam['_id']),
-            'student_id': str(exam['student_id']),
+            'exam_id': str(exam['exam_id']),
             'subject': exam['subject'],
-            'date': exam['date']
+            'date': exam['date'],
+            'duration': exam['duration']
         })
     else:
         return jsonify({'error': 'Exam not found'}), 404
@@ -38,10 +39,10 @@ def get_exam(exam_id):
 def add_exam():
     exam_collection = get_exam_collection()
     new_exam = {
-        'student_id': request.json['student_id'],
+        'exam_id': request.json['exam_id'],
         'subject': request.json['subject'],
         'date': request.json['date'],
-        'score': request.json['score']
+        'duration': request.json['duration']
     }
     result = exam_collection.insert_one(new_exam)
     return jsonify({'id': str(result.inserted_id)}), 201
@@ -50,10 +51,10 @@ def add_exam():
 def update_exam(exam_id):
     exam_collection = get_exam_collection()
     updated_exam = {
-        'student_id': request.json['student_id'],
+        'exam_id': request.json['exam_id'],
         'subject': request.json['subject'],
         'date': request.json['date'],
-        'score': request.json['score'],
+        'duration': request.json['duration'],
         'updated_at': datetime.now()
     }
     result = exam_collection.update_one({'_id': ObjectId(exam_id)}, {'$set': updated_exam})
