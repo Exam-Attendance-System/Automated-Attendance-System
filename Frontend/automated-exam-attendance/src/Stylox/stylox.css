@@ -1,0 +1,50 @@
+.stylox-signature-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .signature-pad-container {
+    border: 2px solid #ddd;
+    padding: 10px;
+    display: inline-block;
+  }
+  
+  .signature-canvas {
+    border: 1px solid #000;
+    width: 400px;
+    height: 200px;
+  }
+  
+  .signature-buttons {
+    margin-top: 10px;
+  }
+  
+  .signature-buttons .btn-clear,
+  .signature-buttons .btn-save,
+  .btn-init {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    border-width: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+.btn-clear:hover, .btn-save:hover, .com-attendance-btn:hover{
+     /* transform: scale(1.05); */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.com-attendance-btn{
+    margin-top:10px ;
+    padding: 10px 130px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    border-width: 0;
+    border-radius: 4px;
+}  

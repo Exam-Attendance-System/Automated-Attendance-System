@@ -4,9 +4,9 @@ import "./IntegrationStatus.css"
 
 function ProgressDashboard() {
   const progressData = [
-    { label: "Student Records", percentage: 75, color: "#4CAF50" },
-    { label: "Exam Schedule", percentage: 60, color: "#2196F3" },
-    { label: "Attendance Data", percentage: 90, color: "#FFC107" },
+    { label: "Student Records", percentage: 75, color: "#000" },
+    { label: "Exam Schedule", percentage: 60, color: "#000" },
+    { label: "Attendance Data", percentage: 90, color: "#000" },
   ];
 
   return (
