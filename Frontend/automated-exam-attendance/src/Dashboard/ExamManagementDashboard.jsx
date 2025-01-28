@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Header from '../Header/header';
+// import Header from '../Header/header';
 import ExamList from './ExamList';
 import ActivityStatus from './ActivityStatus';
 import AddExamModal from './AddExamModal';
-import Sidebar from '../Sidebar/sidebar';
+// import Sidebar from '../Sidebar/sidebar';
 import QuickStatCard from '../Dashboard/QuickStatCard';
 import IntegrationStatus from "../Dashboard/IntergrationStatus"
 import AttendanceAutomation from "../Dashboard/AttendanceAutomation"
@@ -22,11 +22,7 @@ function App() {
 
   return (
 <>
-    <Header />
     <div className="dashboard-container">
-      <div className='side-bar'>
-      <Sidebar/>
-      </div>
      
       <div className="dashboard-content">
       <div className='title-button'>

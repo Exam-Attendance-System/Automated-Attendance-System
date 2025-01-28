@@ -1,0 +1,80 @@
+
+  
+ 
+  
+  /* Header styles */
+  .data-header {
+    margin-bottom: 20px;
+  }
+  
+  .data-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .data-header p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Form styles */
+  .form-group {
+    margin-bottom: 20px;
+   
+  }
+  .form-group-col1{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .form-group input[type="number"],
+  .form-group input[type="text"] {
+    width: 829px;
+    padding: 10px;
+    height: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .form-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Save button */
+  .current-selection {
+    text-align: left;
+  }
+  
+  .current-selection-btn {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: black;
+    border-width: 0;
+    transition: opacity 1sec ease;
+    cursor: pointer;
+    height: 40px;
+  }
+  
+  .current-selection-btn:hover {
+    opacity: 0.7;
+  }
+  
+  .current-selection-btn:active {
+    transform: scale(0.98);
+  }
+  

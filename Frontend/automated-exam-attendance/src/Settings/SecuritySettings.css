@@ -1,0 +1,17 @@
+.form-group-col1{
+    margin-bottom: 10px;
+}
+
+#TwoFA-method{
+    background-color: #fff;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    border-color: #ccc;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+#ip-whitelisting-text{
+    padding: 12px 20px;
+    border-width: 1px;
+    border-color: #ccc;
+    width: 810px;
+}

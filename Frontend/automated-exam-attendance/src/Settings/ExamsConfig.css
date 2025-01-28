@@ -1,14 +1,14 @@
-.configuration-settings {
+/* .configuration-settings {
     padding: 20px;
     background-color: #f4f4f9;
     border-radius: 8px;
     width: 400px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-  }
+  } */
   
   .configuration-settings h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
   }
   
@@ -21,7 +21,7 @@
   }
   
   input[type="number"] {
-    width: 100%;
+    width: 830px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -32,4 +32,13 @@
     padding-top: 10px;
     border-top: 1px solid #ccc;
   }
-  
+  .exams-config-btn{
+    background-color: #0b0c0c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 45px;
+    width: 190px;
+  }
