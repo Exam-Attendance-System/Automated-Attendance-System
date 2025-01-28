@@ -1,19 +1,22 @@
 // import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from './LogIn/login';
-import ExamManagementDashboard from "./Dashboard/ExamManagementDashboard";
-import AuthenticationPage from './Authentication/AuthenticationPage';
+import DashboardPage from "./Dashboard/DashboardPage";
+import AuthenticationPage from './QR Authentication/AuthenticationPage';
+import SettingsMenuPage from "./SettingsMenu/SettingsMenuPage";
 
 const App = () => {
   return (
     <>
       <Router>
         <main>
-          <Routes>
-            <Route path='/' element={<LoginPage />} />
-            <Route path="/dashboard" element={<ExamManagementDashboard />} />
-            <Route path='/AuthenticationPage' element={<AuthenticationPage/>} />
-          </Routes>
+            <Routes>
+                <Route path='/' element={<LoginPage/>}/>
+                <Route path="/dashboard" element={<DashboardPage/>} />
+                <Route path='/Exam' element={<AuthenticationPage/>} />
+                <Route path='/Settings' element={<SettingsMenuPage/>}/>
+               
+            </Routes>
         </main>
       </Router>
     </>

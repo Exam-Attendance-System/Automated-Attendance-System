@@ -1,0 +1,34 @@
+#sync-frequency{
+    width: 190px;
+    padding: 8px 15px;
+    background-color: #fff;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    border-color: #ccc;
+    border-radius: 4px;
+}
+
+#api-key{
+    width: 830px;
+    padding: 10px ;
+    height: 10px;
+    border-color: #dcdcdc;
+    background-color: #fff;
+    border-width: 1px;
+    border-radius: 4px;
+}
+
+.system-integration-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.sys-settings-btn{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: black;
+    border-width: 0;
+    transition: opacity 1sec ease;
+    cursor: pointer;
+    height: 40px;
+}

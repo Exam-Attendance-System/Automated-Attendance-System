@@ -1,24 +1,32 @@
-.RFID-container {
+.title h2{
+  font-size: large;
+  font-size: 30px;
+  text-align: center;
+  margin-right: 410px;
+  margin-top: 130px;
+}
+
+.QR-container {
   padding: 8px 20px;
   border-radius: 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.336);
-  width: 560px;
+  max-width: 880px;
   height: 330px;
   margin-top: 30px;
-  margin-bottom: 80px;
-  margin-left: 340px;
+  margin-bottom: 30px;
+  margin-left: 300px;
   flex-flow: wrap;
   overflow: hidden;
 }
 
-.RFID-container p {
+.QR-container p {
   font-size: 12px;
   margin-top: 0;
 }
 
-.RFID-Tag input {
+.QR-Tag input {
   display: block;
-  min-width: 500px;
+  min-width: 880px;
   background-color: #F5F5F5;
   border-color: #F5F5F5;
   border: none;
@@ -26,14 +34,14 @@
 
 }
 
-.RFID-Tag h4 {
+.QR-Tag h4 {
   margin: 0;
   margin-top: 20px;
 }
 
 .QR-Scanner-button {
-  min-width: 500px;
-  background-color: #716D6D;
+  min-width: 880px;
+  background-color: #716d6d;
   cursor: pointer;
   height: 33px;
   border: none;
@@ -49,19 +57,23 @@ transition: 0.2s;
   cursor: not-allowed;
 }
 
-.Clear-button {
-  background-color: #F5F5F5;
-  min-width: 143px;
-  height: 40px;
-  margin-top: 10px;
-  cursor: pointer;
-  padding: 15px auto;
-  border: none;
+.QR-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: left; 
+  margin-top: 10px; 
 }
 
-.Clear-button:hover {
-  border-radius: 8px;
-  transition: 0.2s;
+.Clear-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #000;
+  background-color: #fff;
 }
 
 .Clear-button:active {
@@ -69,32 +81,26 @@ transition: 0.2s;
   transition: 0.2s;
   border-color: rgba(2, 2, 66, 0.941);
   background-color: #E0CB90;
-
 }
 
 .Verify-button {
   background-color: #000000;
-  min-width: 250px;
+  min-width: 120px;
   color: #FFFF;
   height: 40px;
   border: none;
-  margin-top: 10px;
   cursor: pointer;
-  margin-left: 120px;
-  padding: 15px auto;
+  padding: 10px 20px;
+  border-radius: 4px;
 }
 
-.Verify-button:hover {
-  border-radius: 8px;
-  transition: 0.2s;
-}
 
 .Verify-button:active {
   transition: 0.3s;
   background-color: rgba(2, 2, 66, 0.941);
   border-color: #E0CB90;
-  ;
 }
+
 
 /* Scanner Overlay */
 .scanner-overlay {

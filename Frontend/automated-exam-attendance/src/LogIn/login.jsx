@@ -9,7 +9,7 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/AuthenticationPage", { state: {Email} });
+    navigate("/dashboard", { state: {Email} });
   };
 
   return (

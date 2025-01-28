@@ -1,0 +1,82 @@
+/* Tabs are placed outside the container and at the top */
+.tabs {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+   padding-bottom: 10px;
+   margin-left: 320px;
+  }
+  
+  .tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    opacity: 0.4; /* Make inactive tabs faint */
+    transition: opacity 0.3s ease; /* Smooth transition when switching tabs */
+  }
+  
+  .tab-button.active {
+    color: #0b0c0c; /* Dark color for active tab */
+    border-bottom: 2px solid #0b0c0c; /* Underline for active tab */
+    opacity: 1; /* Full opacity for active tab */
+  }
+  
+  .tab-button:not(.active):hover {
+    opacity: 0.8; /* Slightly increase opacity when hovering over inactive tab */
+  }
+  
+  .container {
+    width: 840px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-left: 320px;
+  }
+  
+ 
+  .centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  .sub-heading {
+    font-size: 0.8em;
+    color: #999;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    width: 80%;
+  }
+  
+  .form-control {
+    width: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  
+  .btn-primary {
+    background-color: #0b0c0c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+  }
+  

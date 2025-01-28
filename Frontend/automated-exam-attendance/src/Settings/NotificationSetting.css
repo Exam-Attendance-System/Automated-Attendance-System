@@ -1,0 +1,69 @@
+.notification-settings {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+  
+  /* h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  } */
+  
+  .toggle-section,
+  .frequency-section,
+  .notification-types-section {
+    margin-bottom: 20px;
+  }
+  
+  .toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .toggle input {
+    margin-right: 10px;
+  }
+  
+  .frequency-section label,
+  .notification-types-section p {
+    font-weight: bold;
+  }
+  #frequency-dropdown{
+    width: 190px;
+    padding: 8px 15px;
+    background-color: #fff;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    border-color: #ccc;
+    border-radius: 4px;
+  }
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .checkbox {
+    margin-bottom: 10px;
+  }
+  
+  .save-settings-btn {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: black;
+    border-width: 0;
+    height: 40px;
+  }
+  
+  .save-settings-btn:hover {
+   opacity: 0.7;
+  }
+  .checkbox{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+

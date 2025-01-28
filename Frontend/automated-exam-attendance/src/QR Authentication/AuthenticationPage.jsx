@@ -1,16 +1,16 @@
 //import React from 'react';
 import Sidebar from "../Sidebar/sidebar";
 import Header from "../Header/header";
-import Title from "./Title";
-import RFIDAuthentication from "./RFIDAuthentication";
+import QRAuthentication from "./QRAuthentication";
+import StyloxSignature from "../Stylox/stylox";
 
 function AuthenticationPage() {
   return (
     <>
       <Sidebar />
       <Header />
-      <Title />
-      <RFIDAuthentication />
+      <QRAuthentication />
+      <StyloxSignature/>
 
     </>
   )

@@ -2,7 +2,7 @@
 .dashboard-container {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f4f7fc;
+  background-color: #ffffff;
   display: flex; /* Display children in a row */
   flex-direction: row; /* Default direction is row */
   height: 100vh; /* Make it full height */
@@ -24,9 +24,9 @@
   margin-left: 270px; /* Give space for sidebar */
   flex-grow: 1; /* Content takes up remaining space */
   padding: 20px;
-  background-color: #f4f7fc;
+  background-color: #ffffff;
   overflow-y: auto; /* Allow scrolling for content if needed */
-  margin-top: 50px;
+  margin-top: 65px;
 }
 
 /* Header */
@@ -64,7 +64,7 @@ h1 {
 
 /* Exam List and Attendance Status styling */
 .exam-list, .attendance-status {
-  background: white;
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 15px;
