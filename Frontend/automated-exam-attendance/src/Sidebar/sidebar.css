@@ -66,18 +66,26 @@ h6{
     padding: 20px;
   }
   
-  .add-exam-btn {
-    margin-bottom: 20px;
-    margin-left: auto;
-    display: block;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+  .sidebar-icon {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 8px; 
+    vertical-align: middle; 
   }
-  
-  .add-exam-btn:hover {
-    background-color: #45a049;
-  }
-  
+ 
+.sidebar-menu li.active {
+  background-color: #d6ceb695; 
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+.sidebar {
+  width: 100%; /* Full width on smaller screens */
+  height: auto; /* Adjust height */
+  position: relative; /* Allow it to flow naturally */
+}
+
+.main-content {
+  margin-left: 0; /* Adjust margin */
+}
+}

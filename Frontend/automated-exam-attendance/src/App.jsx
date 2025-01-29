@@ -20,14 +20,6 @@ const App = () => {
         </main>
       </Router>
     </>
-    // <Router>
-    //     <main>
-    //         <Routes>
-    //             <Route path='/' element={<LoginPage/>}/>
-    //             <Route path="/dashboard" element={<ExamManagementDashboard />} />
-    //         </Routes>
-    //     </main>
-    // </Router>
   );
 };
 
