@@ -26,6 +26,9 @@ app.register_blueprint(attendance_bp, url_prefix='/api')
 from api.functions.qrcode import qrcode_bp
 app.register_blueprint(qrcode_bp, url_prefix='/api')
 
+from api.routes.upcoming_exams import upcoming_exam_bp
+app.register_blueprint(upcoming_exam_bp, url_prefix='/api')
+
 @app.route('/test_db_connection', methods=['GET'])
 def test_db_connection():
     try:
