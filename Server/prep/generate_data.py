@@ -2,6 +2,7 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 import random
 from datetime import datetime, timedelta
+from werkzeug.security import generate_password_hash
 
 # Connect to MongoDB
 client = MongoClient('mongodb+srv://hughesneal88:u9nkwE2XKnbvA1VM@eam-cluster0.urstk.mongodb.net/EAM_Database?retryWrites=true&w=majority&appName=EAM-Cluster0')
@@ -93,6 +94,28 @@ for exam in exams:
         "student_ids": [student["student_id"] for student in assigned_students]
     }
     exam_assignments.append(assignment)
+
+
+    # Generate two admin users
+    admins = [
+        {
+            "_id": ObjectId(),
+            "username": "admin1",
+            "email": "admin1@example.com",
+            "password": generate_password_hash("admin1password"),
+            "role": "admin"
+        },
+        {
+            "_id": ObjectId(),
+            "username": "admin2",
+            "email": "admin2@example.com",
+            "password": generate_password_hash("admin2password"),
+            "role": "admin"
+        }
+    ]
+
+    # Insert admin users into the users collection
+    db.users.insert_many(admins)
 
 # Insert exam assignments into the exam_assignments collection
 db.exam_assignments.insert_many(exam_assignments)
