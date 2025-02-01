@@ -11,7 +11,7 @@ mongo_client = PyMongo(app)
 db = mongo_client.db
 
 #Enable CORS
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://ug-exam-attendance.netlify.app/"}})
 
 # Register Blueprints
 from api.routes.student import student_bp
