@@ -23,8 +23,8 @@ app.register_blueprint(exam_bp, url_prefix='/api')
 from api.routes.attendance import attendance_bp
 app.register_blueprint(attendance_bp, url_prefix='/api')
 
-from api.functions.qrcode import qrcode_bp
-app.register_blueprint(qrcode_bp, url_prefix='/api')
+# from api.functions.qrcode import qrcode_bp
+# app.register_blueprint(qrcode_bp, url_prefix='/api')
 
 from api.routes.upcoming_exams import upcoming_exam_bp
 app.register_blueprint(upcoming_exam_bp, url_prefix='/api')
