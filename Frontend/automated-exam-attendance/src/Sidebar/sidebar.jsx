@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 function Sidebar() {
   const navigate = useNavigate();
   const handleLogout = () => {
-    fetch("http://127.0.0.1:5000/api/user/logout", {
+    fetch("https://automated-attendance-system.onrender.com/api/user/logout", {
       method: "POST",
       headers: {
       "Content-Type": "application/json",

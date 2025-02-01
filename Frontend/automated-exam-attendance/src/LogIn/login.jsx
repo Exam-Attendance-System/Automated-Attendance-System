@@ -75,6 +75,7 @@ const LoginPage = () => {
       method: "POST",
       headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "https://ug-exam-attendance.netlify.app",
       },
       body: JSON.stringify({ email: Email, password: Password }),
     })
