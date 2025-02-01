@@ -1,16 +1,73 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 
 const LoginPage = () => {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
 
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
-    navigate("/dashboard", { state: {Email} });
+  const checkUserValidity = async (userid) => {
+    try {
+      const response = await fetch(`http://127.0.0.1:5000/api/user/isvalid`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userid }),
+      });
+      const data = await response.json();
+      return data.isValid;
+    } catch (error) {
+      console.error('Error checking user validity:', error);
+      return false;
+    }
   };
+  function setSessionItem(key, value, expirationInMinutes) {
+    const now = new Date();
+    const item = {
+        value: value,
+        expiry: now.getTime() + expirationInMinutes * 60000, // Convert minutes to milliseconds
+    };
+    sessionStorage.setItem(key, JSON.stringify(item));
+  }
+
+  const getSessionItem = (key) => {
+    const itemStr = sessionStorage.getItem(key);
+    if (!itemStr) {
+      return null;
+    }
+    const item = JSON.parse(itemStr);
+    const now = new Date();
+    if (now.getTime() > item.expiry) {
+      sessionStorage.removeItem(key);
+      return null;
+    }
+    return item.value;
+  };
+
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      const userid = getSessionItem('session_id'); // Ensure you're using the correct key
+      if (userid) {
+        const valid = await checkUserValidity(userid);
+        setIsLoggedIn(valid);
+        if (valid) {
+          navigate("/dashboard"); // Redirect to dashboard if valid
+        }
+      } else {
+        setIsLoggedIn(false);
+      }
+    };
+
+    checkLoginStatus();
+  }, [navigate]); // Add navigate to the dependency array
+
+  if (isLoggedIn === null) {
+    return <div>Loading...</div>; // Show a loading state while checking login status
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,8 +81,8 @@ const LoginPage = () => {
       .then((response) => response.json())
       .then((data) => {
       if (data.message === 'Login successful') {
-        sessionStorage.setItem("session_id", data.user_id);
-        navigate("/dashboard", { state: {Email} });
+        setSessionItem("session_id", data.user_id, 30);
+        navigate("/dashboard");
       } else {
         alert(data.message || "Login failed. Please check your credentials.");
       }

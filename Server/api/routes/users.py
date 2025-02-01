@@ -91,7 +91,7 @@ def logout():
 
 @users_bp.route('/user/isvalid', methods=['POST'])
 def isValid():
-    user_id = request.json.get('user_id')
+    user_id = request.json.get('userid')
     if not user_id:
         return jsonify({'error': 'User ID is required'}), 400
 
