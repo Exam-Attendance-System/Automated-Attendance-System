@@ -71,7 +71,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://127.0.0.1:5000/api/user/login", {
+    fetch("https://automated-attendance-system.onrender.com/api/user/login", {
       method: "POST",
       headers: {
       "Content-Type": "application/json",
