@@ -1,9 +1,13 @@
 import { useState } from "react";
+import {useLocation} from "react-router-dom"
 import "./QRAuthentication.css";
 import { QrReader } from "react-qr-reader";
 import StyloxSignature from "../Stylox/stylox";
 
 const RFIDAuthentication = () => {
+  const location = useLocation();
+  const studentName = location.state?.studentName || "Unknown Student";
+
   const [isScanning, setIsScanning] = useState(false);
   const [feedback, setFeedback] = useState(null);
   const [rfidTag, setRfidTag] = useState("");
@@ -55,7 +59,6 @@ const RFIDAuthentication = () => {
   };
 
   if (showSignature) {
-    // Display the StyloxSignature component
     return <StyloxSignature />;
   }
 
@@ -66,7 +69,7 @@ const RFIDAuthentication = () => {
         </div>
       <div className="QR-container">
       <h2>Authentication Process</h2>
-      <p>Authenticate Amuzu Mohammed</p>
+      <p>Authenticate {studentName}</p>
       <button
         className="QR-Scanner-button"
         onClick={handleQRScan}

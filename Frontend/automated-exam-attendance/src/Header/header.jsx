@@ -76,8 +76,8 @@ function Header() {
             <div className="profile-menu">
               <ul>
                 <li>View Profile</li>
-                <li>Settings</li>
-                <li>Logout</li>
+                <li><a href="/Settings">Settings</a></li>
+                <li><a href="/">Logout</a></li>
               </ul>
             </div>
           )}

@@ -4,7 +4,7 @@ import LoginPage from './LogIn/login';
 import DashboardPage from "./Dashboard/DashboardPage";
 import AuthenticationPage from './QR Authentication/AuthenticationPage';
 import SettingsMenuPage from "./SettingsMenu/SettingsMenuPage";
-import StudentPage from "./Student/Studentpage";
+import StudentPage from "./Student/StudentPage";
 
 const App = () => {
   return (

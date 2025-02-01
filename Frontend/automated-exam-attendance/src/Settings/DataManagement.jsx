@@ -8,7 +8,7 @@ const DataManagement = () => {
   const [retentionPeriod, setRetentionPeriod] = useState("");
   const [backupFrequency, setBackupFrequency] = useState("");
   const [isAutoBackupEnabled, setIsAutoBackupEnabled] = useState(false);
-  const [backupLocation, setBackupLocation] = useState("");
+  const [backupLocation, setBackupLocation] = useState("default");
   const [activeTab, setActiveTab] = useState("DataManagement");
 
  
@@ -78,13 +78,15 @@ const DataManagement = () => {
 
           <div className="form-group">
             <label htmlFor="backup-location">Backup Location</label>
-            <input
-              type="text"
-              id="backup-location"
-              value={backupLocation}
-              onChange={(e) => setBackupLocation(e.target.value)}
-              placeholder="Enter backup location"
-            />
+            <select
+            id="backup-location"
+            value={backupLocation}
+            onChange={(e) => setBackupLocation(e.target.value)}>
+              <option value="default"> Select Back Up Location</option>
+              <option value="Cloud">Cloud Storage</option>
+              <option value="Local">Local Storage</option>
+              <option value="Both">Both Local & Cloud Storage</option>
+            </select>
           </div>
 
           <div className="current-selection">

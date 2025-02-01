@@ -98,7 +98,7 @@ const Notifications = () => {
               <option value="Select Frequency">Select Frequency</option>
               <option value="daily">Daily</option>
               <option value="weekly">Weekly</option>
-              <option value="monthly">Monthly</option>
+              <option value="monthlyy">Monthly</option>
             </select>
           </div>
 

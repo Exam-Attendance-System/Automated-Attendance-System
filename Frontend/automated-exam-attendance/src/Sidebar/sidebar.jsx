@@ -19,7 +19,7 @@ function Sidebar() {
           </a>
         </li>
         <li>
-          <a href="/">
+          <a href="/Student">
             <img src={usersImg} alt="Students" className="sidebar-icon" />
             Students
           </a>

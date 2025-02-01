@@ -10,15 +10,15 @@
   max-width: 965px;
   margin: 0 auto;
   margin-left: 270px;
-  position: fixed; /* Keep the header fixed at the top */
-  top: 0; /* Position the header at the very top */
-  left: 0; /* Ensure it spans the full width */
-  z-index: 1000; /* Keep the header above other content */
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 1000; 
 }
 
-/* Add margin to the body content to avoid overlap with the fixed header */
+
 body {
-  margin-top: 70px; /* Adjust this value based on your header height */
+  margin-top: 70px; 
 }
 
 .header-left img {
@@ -126,4 +126,8 @@ body {
 
 .profile-menu li:hover {
   background-color: #f9f9f9;
+}
+.profile-menu a{
+  text-decoration: none;
+  color: #302f2f;
 }
