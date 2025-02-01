@@ -3,8 +3,10 @@
   to = "https://automated-attendance-system.onrender.com/:splat"
   status = 200
   force = true
-  headers = { 
+  headers = [
+    { 
     "Access-Control-Allow-Origin" = "https://ug-exam-attendance.netlify.app",
     "Access-Control-Allow-Methods" = "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers" = "Content-Type"
   }
+  ]
