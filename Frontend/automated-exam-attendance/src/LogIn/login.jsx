@@ -11,7 +11,7 @@ const LoginPage = () => {
 
   const checkUserValidity = async (userid) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/user/isvalid`, {
+      const response = await fetch(`https://automated-attendance-system.onrender.com/api/user/isvalid`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
