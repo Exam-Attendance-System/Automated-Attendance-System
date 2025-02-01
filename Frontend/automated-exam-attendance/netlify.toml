@@ -1,11 +1,6 @@
-[[redirects]]
-  from = "/*"
-  to = "https://automated-attendance-system.onrender.com/:splat"
-  status = 200
-  force = true
   [[headers]]
     for = "https://automated-attendance-system.onrender.com"
     [header.values]
     Access-Control-Allow-Origin = "https://ug-exam-attendance.netlify.app"
-    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS, PUT, DELETE"
     Access-Control-Allow-Headers = "Content-Type"
