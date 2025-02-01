@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import UGlogo from "../assets/UGlogo.png";
-import "./Header.css";
+import "./header.css";
 
 function Header() {
   const location = useLocation();
