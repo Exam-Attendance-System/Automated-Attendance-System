@@ -80,9 +80,9 @@ const App = () => {
           <Route path='/' element={isLoggedIn ? <DashboardPage /> : <LoginPage />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path="/dashboard" element={isLoggedIn ? <DashboardPage /> : <LoginPage />} />
-          <Route path="/Student" element={isLoggedIn ? <StudentPage /> : <LoginPage />} />
-          <Route path='/Exam' element={isLoggedIn ? <AuthenticationPage /> : <LoginPage />} />
-          <Route path='/Settings' element={isLoggedIn ? <SettingsMenuPage /> : <LoginPage />} />
+          <Route path="/student" element={isLoggedIn ? <StudentPage /> : <LoginPage />} />
+          <Route path='/exam' element={isLoggedIn ? <AuthenticationPage /> : <LoginPage />} />
+          <Route path='/settings' element={isLoggedIn ? <SettingsMenuPage /> : <LoginPage />} />
         </Routes>
       </main>
     
