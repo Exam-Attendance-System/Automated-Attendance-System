@@ -47,7 +47,8 @@ const App = () => {
       const valid = await checkUserValidity(userid);
       setIsLoggedIn(valid);
       if (valid) {
-        navigate("/dashboard"); // Redirect to dashboard if valid
+        // navigate("/dashboard"); // Redirect to dashboard if valid
+        console.log('logged in')
       }
     } else {
       setIsLoggedIn(false);
