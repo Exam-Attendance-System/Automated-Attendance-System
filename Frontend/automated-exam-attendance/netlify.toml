@@ -2,5 +2,5 @@
     for = "/"
     [headers.values]
     Access-Control-Allow-Origin = "https://ug-exam-attendance.netlify.app"
-    Access-Control-Allow-Methods = "GET", "POST", "OPTIONS", "PUT", DELETE
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS, PUT, DELETE"
     Access-Control-Allow-Headers = "Content-Type"
