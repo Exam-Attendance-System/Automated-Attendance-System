@@ -8,22 +8,47 @@ const SystemIntegration = () => {
   const [testStatus, setTestStatus] = useState("");
   const [activeTab, setActiveTab] =useState("SystemIntegration")
 
-  const handleSaveSettings = () => {
+  const handleSaveSettings = async () => {
     if (!apiEndpoint || !apiKey) {
       alert("Please fill in all fields.");
       return;
     }
-
-    console.log("Connection Settings saved:", { apiEndpoint, apiKey, syncFrequency });
-    alert("Connection settings saved successfully!");
+  
+    try {
+      const response = await fetch("http://127.0.0.1:5000/api/save-settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ apiEndpoint, apiKey, syncFrequency }),
+      });
+  
+      const data = await response.json();
+      if (response.ok) {
+        alert("Settings saved successfully!");
+      } else {
+        alert(data.error);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
-  const handleTestConnection = () => {
-    // Simulating connection test
+
+  const handleTestConnection = async () => {
     setTestStatus("Testing...");
-    setTimeout(() => {
-      setTestStatus("Connection successful!");
-    }, 2000);
+  
+    try {
+      const response = await fetch("http://127.0.0.1:5000/api/test-connection");
+      const data = await response.json();
+  
+      if (response.ok) {
+        setTestStatus(data.message);
+      } else {
+        setTestStatus("Connection failed.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setTestStatus("Connection failed.");
+    }
   };
 
   const renderContent =()=>{

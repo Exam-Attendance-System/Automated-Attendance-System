@@ -28,8 +28,12 @@ app.register_blueprint(attendance_bp, url_prefix='/api')
 
 from api.routes.upcoming_exams import upcoming_exam_bp
 app.register_blueprint(upcoming_exam_bp, url_prefix='/api')
+
 from api.routes.users import users_bp
 app.register_blueprint(users_bp, url_prefix='/api')
+
+from api.routes.system_integration import system_integration_bp
+app.register_blueprint(system_integration_bp, url_prefix='/api')
 
 @app.route('/test_db_connection', methods=['GET'])
 def test_db_connection():
